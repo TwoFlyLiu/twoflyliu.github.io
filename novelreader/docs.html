@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <!-- 为了确保绘制和触摸屏缩放，需要添加viewport元标签 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name=”renderer” content=”webkit” />  
+
+        <!-- 设置viewport, user-scalable=no可以进制缩放，这样可以让你的网站更像原生应用，不推荐所有网站使用 -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+        
+        <link href="/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="/assets/OwlCarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="/assets/OwlCarousel/assets/owl.theme.default.min.css">
+
+        <script src="/assets/js/jquery-3.4.1.js"></script>
+        <script src="/assets/js/bootstrap.js"></script>
+
+        <style>
+          .owl-carousel {
+            width: auto !important;
+            height: auto !important;
+          }
+        </style>
+        <title>飞飞阅读 - 文档</title>
+
+        <style>
+        </style>
+    </head>
+
+    <!-- bootstrap默认主持颜色时#fff -->
+    <body>
+        <!-- container, container-fluid的区别，后面时页面宽度为100%， 前者不是 -->
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <!-- 导航栏头(放置项目Logo) -->
+            <div class="navbar-header">
+              <a href="#" class="navbar-brand" style="margin-top: -5px;"><img src="./assets/img/icon3.png" style="width: 32px; height:32px;"></a>
+              <a href="./index.html" class="navbar-brand" style="margin-left: -20px;">飞飞阅读</a>
+            </div>
+
+            <!-- 存放导航内容 -->
+            <div class="collapse navbar-collapse">
+              <!-- 在导航右侧添加导航控件 -->
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> 文档</a></li>
+                <li><a href="./index.html#Features"><span class="glyphicon glyphicon-eye-open"></span>  特性</a></li>
+                <li>
+                  <a href="https://github.com/twoflyliu/novel-win" target="_blank">
+                    <span class="glyphicon glyphicon-tasks"></span> GitHub
+                  </a>
+                </li>
+                <li>
+                  <a href="/index.html">
+                    <span class="glyphicon glyphicon-home"></span> TwoFlyLiu
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+
+        <div class="container" style="margin-top: 70px;">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="list-group page-menu" id="page-menu" style="position: fixed;">
+                <button type="button" class="list-group-item active">简介</button>
+                <button type="button" class="list-group-item ">安装</button>
+                <button type="button" class="list-group-item">
+                  使用介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </button>
+                <button type="button" class="list-group-item">感谢</button>
+              </div>
+            </div>
+            <div class="col-md-9" id="page-content-container">
+              <div class="page-content">
+                <h4>简介</h4>
+                <hr>
+                <p>安卓平台下支持小说搜索、下载、阅读的小说阅读器。</p>
+                <p>本软件使用java + android sdk进行开发</p>
+                <p>本软件支持支持多线程下载/更新。</p>
+              </div>
+              <div class="page-content sr-only">
+                <h4>安装</h4>
+                <hr>
+                <p>点击主页下载按钮，然后保存文件文件到本地，当下载完毕的时候，您会得到一个apk文件</p>
+                <p>手机上单击此文件即可自动进行安装</p>
+              </div>
+              <div class="page-content long-content sr-only">
+                <h4>使用介绍</h4>
+                <hr>
+
+                <h4><small>进入搜索页面</small></h4>
+                <p>
+                  点击搜索栏目，会进入搜索页面，如下图：
+                  <img src="./assets/img/usage/goto_search.png" alt="进入搜索页面" class="img-responsive">
+                </p>
+
+                <h4><small>进行小说下载</small></h4>
+                <p>
+                  在搜索页面中，输入一个小说名称，然后点击搜索，当搜索完成，在匹配列表中，单击<code>下载按钮</code>即可，如下图：
+                  <img src="./assets/img/usage/search_download.jpg" alt="进行小说下载" class="img-responsive"><br>
+                  <strong>当下载完毕后，小说会自动添加到书架</strong>
+                </p>
+
+                <h4><small>进行进行小说更新</small></h4>
+                <p>
+                  在搜索页面中，输入一个需要更新的小说名称（需要确保之前已经下载在本地），然后点击搜索，在匹配列表中，单击<code>更新按钮</code>即可，如下图：
+                  <img src="./assets/img/usage/search_update.jpg" alt="进行小说更新" class="img-responsive">
+                </p>
+
+                <h4><small>进入下载页面</small></h4>
+                <p>
+                  点击<code>下载</code>栏目，会进入下载页面, 如下图：
+                  <img src="./assets/img/usage/goto_download.jpg" alt="进入下载页面" class="img-responsive">
+                </p>
+
+                <h4><small>查看所有下载</small></h4>
+                <p>
+                  在下载页面，点击上方的<code>所有下载</code>栏目，如下图：
+                  <img src="./assets/img/usage/download_all.jpg" alt="所有下载" class="img-responsive">
+                </p>
+                <h4><small>查看已经完成</small></h4>
+                <p>
+                  在下载页面，点击上方的<code>已经完成</code>栏目，如下图：
+                  <img src="./assets/img/usage/download_done.jpg" alt="下载完成" class="img-responsive">
+                </p>
+                <h4><small>查看正在下载</small></h4>
+                <p>
+                  在下载页面，点击上方的<code>正在下载</code>栏目，如下图：
+                  <img src="./assets/img/usage/download_ing.jpg" alt="正在下载" class="img-responsive">
+                </p>
+
+                <h4><small>进入书架</small></h4>
+                <p>
+                  点击<code>书架</code>栏目，会进入书架页面, 如下图：
+                  <img src="./assets/img/usage/novels.jpg" alt="正在下载" class="img-responsive">
+                </p>
+
+                <h4><small>删除小说</small></h4>
+                <p>
+                  在书架页面，手指长按屏幕，则会弹出删除小说窗口，选中需要删除的小说，点击<code>删除所选</code>即可，如下图所示：
+                  <img src="./assets/img/usage/novels_delete.jpg" alt="正在下载" class="img-responsive">
+                </p>
+
+                <h4><small>阅读小说</small></h4>
+                <p>
+                  在书架页面，手指点击您要看的小说，则会自动弹出窗口显示小说内容，如下图所示：
+                  <img src="./assets/img/usage/view.jpg" alt="阅读小说" class="img-responsive">
+                </p>
+
+                <h4><small>打开小说章节目录</small></h4>
+                <p>
+                  1.在阅读界面，然后手指点击屏幕中心，上侧和下侧会弹出菜单如下图所示：
+                  <img src="./assets/img/usage/view_menu.jpg" alt="弹出菜单" class="img-responsive">
+                  2.点击目录菜单，会自动弹出章节目录，如下图所示：
+                  <img src="./assets/img/usage/view_menu.png" alt="章节目录" class="img-responsive">
+                </p>
+
+                <h4><small>添加书签</small></h4>
+                <p>
+                  1.确保在阅读界面，然后手指点击屏幕中心，上侧和下侧会弹出菜单如下图所示：
+                  <img src="./assets/img/usage/view_menu.jpg" alt="弹出菜单" class="img-responsive">
+                  2.点击右上角的<code>添加书签</code>按钮，则会添加书签
+                </p>
+
+                <h4><small>打开书签</small></h4>
+                <p>
+                  1.在阅读界面，然后手指点击屏幕中心，上侧和下侧会弹出菜单如下图所示：
+                  <img src="./assets/img/usage/view_menu.jpg" alt="弹出菜单" class="img-responsive">
+                  2.点击目录菜单，会自动弹出章节目录，如下图所示：
+                  <img src="./assets/img/usage/view_menu.png" alt="章节目录" class="img-responsive">
+                  3.在弹出的界面上，点击上侧的第二个Tab按钮，即可打开书签页面，点击下侧的指定条目即可自动跳转到对应书签的位置,如下图所示：
+                  <img src="./assets/img/usage/view_tag.png" alt="查看书签" class="img-responsive">
+                </p>
+
+                <h4><small>夜间模式</small></h4>
+                <p>
+                  1. 在阅读界面，在屏幕中间点击唤出菜单，然后点击<code>夜间模式</code>则会进入夜间模式，如下图所示：
+                  <img src="./assets/img/usage/view_0_night.jpg" alt="夜间模式" class="img-responsive"><br>
+                  <img src="./assets/img/usage/view_night.jpg" alt="夜间模式" class="img-responsive">
+                </p>
+
+                <h4><small>其他设置</small></h4>
+                <p>本软件还支持其他设置，比如亮度设置，字体设置，背景设置..., 可以在唤醒的菜单中<code>设置</code>菜单项中进行设置</p>
+              </div>
+
+              <div class="page-content sr-only">
+                <h4>感谢</h4>
+                <hr>
+                感谢<a href="https://github.com/PeachBlossom/treader">如风小说阅读器</a>项目
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer" class="footer navbar-fixed-bottom" style="background-color:#f8f8f8; padding:20px 0; ">
+          <div class="container">
+              <p>This website is created by <a href="/index.html">TwoFlyLiu</a></p>
+              <p>Code License is <a href="https://github.com/TwoFlyLiu/novelreader/blob/master/LICENSE" target="_blank">GNU General Public License v3.0</a></p>
+          </div>
+        </footer>
+
+        <script src="/assets/OwlCarousel/owl.carousel.min.js"></script>
+        <script src="./assets/js/doc.js"></script>
+    </body>
+</html>

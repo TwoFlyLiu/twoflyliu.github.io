@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <!-- 为了确保绘制和触摸屏缩放，需要添加viewport元标签 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name=”renderer” content=”webkit” />  
+
+        <!-- 设置viewport, user-scalable=no可以进制缩放，这样可以让你的网站更像原生应用，不推荐所有网站使用 -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+        
+        <link href="/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="/assets/OwlCarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="/assets/OwlCarousel/assets/owl.theme.default.min.css">
+
+        <script src="/assets/js/jquery-3.4.1.js"></script>
+        <script src="/assets/js/bootstrap.js"></script>
+
+        <style>
+          .owl-carousel {
+            width: auto !important;
+            height: auto !important;
+          }
+          .title {
+            margin-top: -5px;
+          }
+        </style>
+        
+        <title>DcmAppTest - CAN诊断应用测试</title>
+
+        <style>
+        </style>
+    </head>
+
+    <!-- bootstrap默认主持颜色时#fff -->
+    <body>
+        <!-- container, container-fluid的区别，后面时页面宽度为100%， 前者不是 -->
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <!-- 导航栏头(放置项目Logo) -->
+            <div class="navbar-header">
+              <a href="#" class="navbar-brand" style="margin-top: -5px;"><img src="./assets/img/SmallDcm.ico"></a>
+              <a href="#" class="navbar-brand" style="margin-left: -20px;">DcmAppTest</a>
+            </div>
+
+            <!-- 存放导航内容 -->
+            <div class="collapse navbar-collapse">
+              <!-- 在导航右侧添加导航控件 -->
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="./docs.html"><span class="glyphicon glyphicon-list-alt"></span> 文档</a></li>
+                <li><a href="#Features"><span class="glyphicon glyphicon-eye-open"></span> 特性</a></li>
+                <li>
+                  <a href="https://github.com/twoflyliu/dcmapptest" target="_blank">
+                    <span class="glyphicon glyphicon-tasks"></span> GitHub
+                  </a>
+                </li>
+                <li>
+                  <a href="/index.html">
+                    <span class="glyphicon glyphicon-home"></span> TwoFlyLiu
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+
+        <!-- 介绍 -->
+        <div class="jumbotron">
+          <div class="container" style="margin-top: 30px;">
+            <h1>DcmAppTest</h1>
+            &nbsp;
+            <p>DcmAppTest是一款免费、开源的CAN总线诊断应用测试软件。</p>
+            &nbsp;
+            <p>
+              <a href="https://raw.githubusercontent.com/twoflyliu/DcmAppTest/master/Dist/DcmAppTest-V1.0.0.zip" class="btn btn-primary btn-lg">下载 V1.0.0</a>
+            </p>
+          </div>
+        </div>
+          
+       <div class="container">
+          <!-- 存放主题滚动截图 -->
+          <!-- Set up your HTML -->
+          <h2 class="text-primary text-center title">主题</h2>
+          <div class="owl-carousel owl-theme">
+            <div class="item"> 
+              <img src="./assets/img/Win10/Win10-VS2015-Blue.png">
+            </div>
+            <div class="item"> 
+              <img src="./assets/img/Win10/Win10-VS2015-Dark.png">
+            </div>
+            <div class="item">
+              <img src="./assets/img/Win10/Win10-VS2015-Light.png">
+            </div>
+            <div class="item"> 
+              <img src="./assets/img/XP/XP-VS2015-Blue.png">
+            </div>
+            <div class="item"> 
+              <img src="./assets/img/XP/XP-VS2015-Dark.png">
+            </div>
+            <div class="item">
+              <img src="./assets/img/XP/XP-VS2015-Light.png">
+            </div>
+          </div>
+
+          <!-- 特性 -->
+          <div class="row">
+            <a name="Features">&nbsp;</a>
+            <h2 class="text-primary text-center title">特性</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">使用C#/Winform</h3>
+                </div>
+                <div class="panel-body">
+                  <p>使用C#语言，搭配WinForm界面库来进行应用开发，确保高性能</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">支持USBCAN</h3>
+                </div>
+                <div class="panel-body">
+                  <p>支持广成科技的USB CAN盒作为CAN输入输出设备</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">支持ISO15765传输协议</h3>
+                </div>
+                <div class="panel-body">
+                  <p>支持ISO15765传输协议</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">支持ISO14229应用协议</h3>
+                </div>
+                <div class="panel-body">
+                  <p>支持ISO14229应用协议</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">支持项目管理</h3>
+                </div>
+                <div class="panel-body">
+                  <p>支持项目管理，支持保存，加载项目</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">高亮显示诊断数据</h3>
+                </div>
+                <div class="panel-body">
+                  <p>高亮显示诊断数据，肯定响应绿色高亮显示，否则响应黄色高亮显示，方便区分</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">支持可配置方式</h3>
+                </div>
+                <div class="panel-body">
+                  <p>内部软件灵活设计，完全可配置，用户可以根据自己的诊断需求来通过GUI界面创建自己的配置，来满足自己的需求</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">发送/接收自动编码/解码</h3>
+                </div>
+                <div class="panel-body">
+                  <p>通过易于操作的GUI界面，对于设置操作，内部自动编码，对于发送操作，内部自动解码</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">多种格式数据展示</h3>
+                </div>
+                <div class="panel-body">
+                  <p>支持多种格式数据展示，包括诊断应用数据，链路层数据</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">支持保存/加载诊断应用数据功能</h3>
+                </div>
+                <div class="panel-body">
+                  <p>支持保存/加载诊断应用数据功能，便于工程师离线分析诊断问题</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">支持XP系统</h3>
+                </div>
+                <div class="panel-body">
+                  <p>支持XP系统,确保老的电脑也可以使用本软件</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">支持Dock布局</h3>
+                </div>
+                <div class="panel-body">
+                  <p>支持Dock布局, 并且会自动保存用户自己的布局</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">支持主题设置</h3>
+                </div>
+                <div class="panel-body">
+                  <p>支持主题设置，当前支持3套主题（黑，白，蓝）</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">安全算法插件化</h3>
+                </div>
+                <div class="panel-body">
+                  <p>安全算法插件化，可以根据自己的项目需求来创建自己的安全算法</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 优势 -->
+          <div class="row">
+            <h2 class="text-primary text-center">优势</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">免费开源</h3>
+                </div>
+                <div class="panel-body">
+                  <p>本项目完全免费、开源，代码托管于<a target="_blank" href="https://github.com/twoflyliu/dcmapptest">GitHub</a>上</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">可配置</h3>
+                </div>
+                <div class="panel-body">
+                  <p>以配置的方式来动态生成要设置的UI, 可以极大加快开发效率，不用每次需求变更的时候都需要重新编写软件</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">集成配置编辑器</h3>
+                </div>
+                <div class="panel-body">
+                  <p>集成配置编辑器，这样可以使用编辑器来修改配置，不用手动修改配置文件，可以避免出错</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">免费</h3>
+                </div>
+                <div class="panel-body">
+                  <p>相比较于Canoe或者Spy3，加上对应的配套软件，至少需要上万元成本，而使用本软件，只需要花几百元买个广成科技的UsbCan, 加上本软件就可以完成软件测试的基本需求</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">使用C# .net 4开发</h3>
+                </div>
+                <div class="panel-body">
+                  <p>内部使用C# .net4 winform作为开发平台，当前即使XP系统也可以安装.net4</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">支持Dock布局</h3>
+                </div>
+                <div class="panel-body">
+                  <p>用户可以随心所欲的根据自己的需求来调整布局</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">支持主题设置</h3>
+                </div>
+                <div class="panel-body">
+                  <p>一般工业软件不太注重界面，但是本软件也支持主题设置</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">安全算法插件化</h3>
+                </div>
+                <div class="panel-body">
+                  <p>对于诊断应用来讲，一般支持的服务/子功能都是固定，对于不同项目仅仅是安全算法的区别。本软件将安全算法插件化，可以根据不同项目实现对应的插件来满足自己的需求</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- footer -->
+        <footer style="background-color:#f8f8f8; padding:20px 0">
+          <div class="container">
+              <p>This website is created by <a href="/index.html">TwoFlyLiu</a></p>
+              <p>Code License is <a target="_blank" href="https://github.com/TwoFlyLiu/dcmapptest/blob/master/LICENSE">Apache License 2.0</a></p>
+          </div>
+        </footer>
+
+        <script src="/assets/OwlCarousel/owl.carousel.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
